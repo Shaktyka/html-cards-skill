@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" 
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="css/case_1.css">
+</head>
+<body>
+  <main class="case-1">
+    <!-- Карточка -->
+    <article class="card">
+      <!-- Изображение -->
+      <div class="card__img-wrap">
+        <img 
+          class="card__img"
+          src="img/snowman.jpg" 
+          width="670" height="684" 
+          alt="Новогодняя игрушка Снеговик" 
+          title="Новогодняя игрушка Снеговик"
+        >
+      </div>
+      <!-- Информация -->
+      <div class="card__info-wrap card-info">
+        <p class="card-info__article">Артикул: 856935</p>
+        <h1 class="card-info__title">Новогодняя игрушка Снеговик</h1>
+        <div class="card-info__wrap1">
+          <div class="card-info__price">490 &#8381;</div>
+          <div class="card-info__rating rating">
+            <!-- Установка рейтинга -->
+            <div class="rating__area">
+              <input type="radio" id="star-5" name="rating" value="5">
+              <label for="star-5" title="Оценка «5»"></label>	
+              <input type="radio" id="star-4" name="rating" value="4">
+              <label for="star-4" title="Оценка «4»"></label>    
+              <input type="radio" id="star-3" name="rating" value="3">
+              <label for="star-3" title="Оценка «3»"></label>  
+              <input type="radio" id="star-2" name="rating" value="2">
+              <label for="star-2" title="Оценка «2»"></label>    
+              <input type="radio" id="star-1" name="rating" value="1">
+              <label for="star-1" title="Оценка «1»"></label>
+            </div>
+            <!-- Вывод рейтинга -->
+            <div class="rating__result">
+              <span class="active"></span>	
+              <span class="active"></span>    
+              <span class="active"></span>  
+              <span></span>    
+              <span></span>
+            </div>
+            <a class="card-info__link-to-reviews link" href="#">15 отзывов</a>
+          </div>
+        </div>
+        <!-- Описание -->
+        <div class="card-info__description description">
+          <h3 class="description__title">Описание</h3>
+          <p class="description__text">
+            Новогодняя игрушка Снеговик украсит ваш дом
+            к празднику. Небольшой размер позволяет поставить ее
+            в любое место: под елку, на стол, на камин, на полку. Все детали игрушки 
+            надежно прикреплены, так что она будет радовать вас много лет.
+          </p>
+        </div>
+        <!-- Характеристики -->
+        <div class="card-info__params params">
+          <h3 class="params__title">Характеристики</h3>
+          <dl class="params__list">
+            <dt class="params__term">Бренд</dt>
+            <dd class="params__value">Christmas toys</dd>
+          </dl>
+          <dl class="params__list">
+            <dt class="params__term">Материал</dt>
+            <dd class="params__value">Керамика, пластик, шерсть</dd>
+          </dl>
+          <dl class="params__list">
+            <dt class="params__term">Высота</dt>
+            <dd class="params__value">20 см</dd>
+          </dl>
+          <dl class="params__list">
+            <dt class="params__term">Вес</dt>
+            <dd class="params__value">150 гр</dd>
+          </dl>
+        </div>
+        <!-- Ссылки -->
+        <div class="card-info__buttons">
+          <a href="#" class="button button--action card__button-add">
+            Добавить в корзину
+          </a>
+          <a href="#" class="button button--arrow card__button-shop">
+            Наличие в магазинах
+          </a>
+        </div>
+      </div>
+    </article>
+    <a class="notes" href="notes.html">Заметки</a>
+  </main>
+</body>
+</html>

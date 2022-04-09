@@ -1,0 +1,65 @@
+/* Общие стили */
+
+*, ** {
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --main-text: #0D0417;
+  --yellow: #F8D456;
+  --gray: #797980;
+  --l-gray: #B6B6BF;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  line-height: 19,6px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--main-text);
+}
+
+a {
+  text-decoration: none;
+}
+
+.case-1 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Карточка */
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Блок изображения */
+
+.card__img-wrap {
+  display: flex;
+  max-width: 670px;
+}
+
+/* Блок инфо */
+
+.card-info {
+  max-width: 470px;
+}
+
+.card-info__article {
+  
+}
