@@ -1,0 +1,211 @@
+/* variables */
+:root {
+    --bg: #E5E5E5;
+    --dark-text: #0D0417;
+    --light-text: #787878;
+
+    --white: #ffffff;
+    --accent: #F8D456;
+    --violet: #8962F8;
+    --blue: #1EA5FC;
+    --red: #FD7441;
+}
+
+/* base */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Noto Sans", "Arial", sans-serif;
+    font-size: 10px;
+    line-height: 1.4rem;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--dark-text);
+    background-color: var(--bg);
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* test */
+
+* {
+    outline: 1px solid gray;
+}
+
+/* Контейнер */
+
+.container {
+    width: calc(117rem + 9.8rem * 2);
+    max-width: calc(117rem + 9.8rem * 2);
+    margin: 0 auto;
+}
+
+.main {
+    background-color: var(--white);
+}
+
+.cards {
+    padding: 9.8rem;
+}
+
+.cards__list {
+    /* Фиксированная сетка на гридах */
+    display: grid;
+    grid-template-columns: repeat(4, 27rem);
+    grid-gap: 3rem;
+}
+
+/* Классы для кнопок */
+
+/* Карточка */
+
+.card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20rem 1fr;
+    
+    min-width: 27rem;
+    width: 27rem;
+    min-height: 35.7rem;
+}
+
+.card__label {
+    display: none;
+}
+
+.card__img-wrap {
+    display: flex;
+    max-width: 27rem;
+}
+
+.card__description {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    padding-top: 1.5rem;
+    padding-right: 0.9rem;
+    padding-bottom: 2rem;
+    padding-left: 0.9rem;
+}
+
+.card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 1.1rem;
+}
+
+.card__articul {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: var(--light-text);
+}
+
+.card__rating {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.card__stars {
+    display: flex;
+
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+    color: #0D0417;
+}
+
+.card__star {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.card__reviews {
+    margin-left: 1rem;
+
+    font-family: 'Noto Sans';
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: var(--light-text);
+
+    text-decoration: underline;
+}
+
+.card__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+.card__buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-top: auto;
+}
+
+.card__prices {
+    display: flex;
+}
+
+.card__price {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+.card__price--old {
+    display: none;
+
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
