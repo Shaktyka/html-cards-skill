@@ -1,8 +1,12 @@
 
 // Карточка товара:
-const Card = ({id, title, article, rating, reviews, price, image}) => {
+const Card = (props) => {
+    const {id, title, article, rating, reviews, price, image} = props.data;
+
+    const imgUrl = `img/${image}`;
+
     return (
-        <li className="cards__item card" tabindex="0" id={id}>
+        <li className="cards__item card" tabIndex="0" id={id}>
             <span className="label label--popular card__label">
                 Новинка
             </span>
@@ -15,7 +19,7 @@ const Card = ({id, title, article, rating, reviews, price, image}) => {
             <div className="card__img-wrap">
                 <img 
                     className="img card__img" 
-                    src={image}
+                    src={imgUrl}
                     width="270" height="200"
                     alt={title}
                 />
@@ -71,7 +75,9 @@ const CardsList = ({cards}) => {
     return (
         <section className="cards">
             <ul className="list cards__list">
-                <li>тест</li>
+            {
+                cards.map((dataObj) => <Card key={dataObj.id} data={dataObj} />)
+            }
             </ul>
         </section>
     );
