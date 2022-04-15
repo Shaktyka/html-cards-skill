@@ -1,13 +1,15 @@
 
 // Карточка товара:
 const Card = (props) => {
-    const {id, title, article, rating, reviews, price, image} = props.data;
+    const {id, title, article, rating, reviews, price, image, isSale, isHit, isNew} = props.data;
 
     const imgUrl = `img/${image}`;
 
+    const className = `cards__item card ${isSale === true ? 'card--sale': ''} ${isHit === true ? 'card--hit' : ''} ${isNew === true ? 'card--new' : ''}`;
+
     return (
-        <li className="cards__item card" tabIndex="0" id={id}>
-            <span className="label label--popular card__label">
+        <li className={className} tabIndex="0" id={id}>
+            <span className="label label--new card__label">
                 Новинка
             </span>
             <span className="label label--sale card__label">

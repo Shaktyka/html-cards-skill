@@ -1,12 +1,12 @@
 const cards = [
    {
-        id: 1,
-        title: 'Набор «Я – доктор»',
-        article: 856935,
-        rating: 4.9,
-        reviews: 19,
-        price: 590,
-        image: 'img-1.jpeg'
+      id: 1,
+      title: 'Набор «Я – доктор»',
+      article: 856935,
+      rating: 4.9,
+      reviews: 19,
+      price: 590,
+      image: 'img-1.jpeg'
    },
    {
       id: 2,
@@ -16,7 +16,7 @@ const cards = [
       reviews: 35,
       price: 290,
       image: 'img-2.jpeg',
-      hasSale50: true
+      isSale: true
    },
    {
       id: 3,

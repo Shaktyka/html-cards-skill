@@ -127,8 +127,37 @@ body {
     outline-width: 0.2rem;
 }
 
-.card__label {
+.label {
+    position: absolute;
+    top: 1.4rem;
+    left: 1.4rem;
     display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem 1rem 0.4rem;
+    border-radius: 0.4rem;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.label--sale {
+    background-color: var(--red);
+}
+
+.label--hit {
+    background-color: var(--violet);
+}
+
+.label--new {
+    background-color: var(--blue);
+}
+
+.card--sale .label--sale,
+.card--hit .label--hit,
+.card--new .label--new {
+    display: flex;
 }
 
 .card__img-wrap {
