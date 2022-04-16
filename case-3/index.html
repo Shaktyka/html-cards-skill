@@ -12,9 +12,188 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <main class="main">
+    <main class="card-container">
         <article class="card">
+            <form class="form card__form" action="#" method="get">
 
+                <!-- Основная информация -->
+                <div class="card__main">
+                    <!-- галерея фото -->
+                    <div class="card__img-container">
+                        <ul class="img-carousel">
+                            <li class="img-carousel__item">
+                                <img class="img-carousel__img" src="img/photo-1.jpeg" alt="Photo 1" width="170" height="206">
+                            </li>
+                            <li class="img-carousel__item">
+                                <img class="img-carousel__img" src="img/photo-2.jpeg" alt="Photo 2" width="170" height="206">
+                            </li>
+                            <li class="img-carousel__item">
+                                <img class="img-carousel__img" src="img/photo-3.jpeg" alt="Photo 3" width="170" height="206">
+                            </li>
+                            <li class="img-carousel__item">
+                                <img class="img-carousel__img" src="img/photo-4.jpeg" alt="Photo 4" width="170" height="206">
+                            </li>
+                            <li class="img-carousel__item active">
+                                <img class="img-carousel__img" src="img/photo-5.jpeg" alt="Photo 5" width="500" height="870">
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- инфо о товаре -->
+                    <div class="card__info-container card-info">
+                        <h1 class="card-info__title">Смартфон APPLE IPhone 11 Pro 512Gb, черный </h1>
+                        <!-- наличие, звёздочки, кол-во отзывов -->
+                        <div class="card-info__info">
+                            <p class="card-info__availability">
+                                <img src="img/ok-arrow.svg" alt="">
+                                Есть в наличии
+                            </p>
+                            <div class="card-info__stars star-rate">
+                              <img src="img/star.svg" alt="">
+                              <img src="img/star.svg" alt="">
+                              <img src="img/star.svg" alt="">
+                              <img src="img/star.svg" alt="">
+                              <img src="img/star.svg" alt="">
+                            </div>
+                            <a class="card-info__reviews link" href="#">246 отзывов</a>
+                        </div>
+                        <!-- объём памяти -->
+                        <div class="card-info__block card-info--memory-chooser">
+                            <h3 class="card-info__subtitle">Объём памяти</h3>
+                            <div class="memory-chooser">
+                                <input class="memory-chooser__item" type="radio" name="memory" id="memory_1">
+                                <label class="memory-chooser__label" for="memory_1">64Gb</label>
+                          
+                                <input class="memory-chooser__item" type="radio" name="memory" id="memory_2">
+                                <label class="memory-chooser__label" for="memory_2">128Gb</label>
+                          
+                                <input class="memory-chooser__item" type="radio" name="memory" id="memory_3">
+                                <label class="memory-chooser__label" for="memory_3">256Gb</label>
+                          
+                                <input class="memory-chooser__item" type="radio" name="memory" id="memory_4" checked>
+                                <label class="memory-chooser__label" for="memory_4">512Gb</label>
+                            </div>
+                        </div>
+                        <!-- цвет -->
+                        <div class="card-info__block card-info--color-chooser">
+                            <h3 class="card-info__subtitle">Цвет</h3>
+                            <div class="color-chooser">
+                                <label class="visually-hidden" for="color_1">Чёрный</label>
+                                <input class="color-chooser__item" type="radio" name="color" id="color_1"
+                                  style="background-color: #001524;" checked>
+                                <label class="visually-hidden" for="color_2">Мятный</label>
+                                <input class="color-chooser__item" type="radio" name="color" id="color_2"
+                                  style="background-color: #C0E9D7;">
+                          
+                                <label class="visually-hidden" for="color_3">Жёлтый</label>
+                                <input class="color-chooser__item" type="radio" name="color" id="color_3"
+                                  style="background-color: #FFE98C;">
+                          
+                                <label class="visually-hidden" for="color_4">Серый</label>
+                                <input class="color-chooser__item" type="radio" name="color" id="color_4"
+                                  style="background-color: #D7D4DD;">
+
+                                <label class="visually-hidden" for="color_4">Красный</label>
+                                <input class="color-chooser__item" type="radio" name="color" id="color_4"
+                                style="background-color: #CD273D;">
+                            </div>
+                        </div>
+                        <!-- характеристики -->
+                        <div class="card-info__block card-info--data-list">
+                            <h3 class="card-info__subtitle">
+                                Характеристики <a href="#">Все характеристики</a>
+                            </h3>
+                            <dl class="data-list">
+                              <dt>Диагональ экрана, в дюймах:</dt>
+                              <dd>5.8</dd>
+                              <dt>Разрешение экрана, в пикселях: </dt>
+                              <dd>2436x1125</dd>
+                              <dt>Встроенная память, в Гб:</dt>
+                              <dd>512</dd>
+                              <dt>Оперативная память, в Гб:</dt>
+                              <dd>4</dd>
+                              <dt>Емкость аккумулятора, в мА-ч:</dt>
+                              <dd>3046</dd>
+                              <dt>Количество основных камер:</dt>
+                              <dd>три</dd>
+                              <dt>Год выхода модели:</dt>
+                              <dd>2019</dd>
+                              <dt>Тип дисплея:</dt>
+                              <dd>Super Retina XDR</dd>
+                            </dl>
+                        </div>
+                        <!-- цена -->
+                        <p class="card-info__price price">
+                            <span class="price__text">Цена:</span>
+                            <span class="price__value">107 990 ₽</span>
+                        </p>
+                        <!-- кнопки -->
+                        <div class="card-info__buttons">
+                            <button class="button card-info__button button--accent">Добавить в корзину</button>
+                            <a class="button card-info__button button--bordered" href="#">
+                                Рассрочка от <span>10 800 ₽ / месяц</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Дополнительно -->
+                <div class="card__more">
+                    <!-- список табов -->
+                    <ul class="tabs card__tabs">
+                        <li class="tabs__item tab tab--active">
+                            <a class="tab__link" href="#">Описание</a>
+                        </li>
+                        <li class="tabs__item tab">
+                            <a class="tab__link" href="#">Характеристики</a>
+                        </li>
+                        <li class="tabs__item tab">
+                            <a class="tab__link" href="#">Аксессуары</a>
+                        </li>
+                        <li class="tabs__item tab">
+                            <a class="tab__link" href="#">Отзывы</a>
+                        </li>
+                        <li class="tabs__item tab">
+                            <a class="tab__link" href="#">Вопрос-ответ</a>
+                        </li>
+                    </ul>
+                    <!-- список описаний -->
+                    <ul class="descriptions card__descriptions">
+                        <li class="descriptions__item description description--active">
+                            <p>
+                                Смартфон iPhone 11 Pro 512Gb в корпусе черного цвета понравится пользователям 
+                                не только большим объемом встроенной памяти. Гаджет нового поколения оснащен 
+                                высокими технологиями будущего. Корпус модели теперь еще более усилен.
+                            </p>
+                            <p>
+                                Стекло обработано методом двойного ионного обмена. Водозащита позволяет выдержать 
+                                четырехметровые волны. Главной особенностью модели iPhone 11 Pro является новая 
+                                система трех камер, за счет слаженной работы которых удается создать фотографии 
+                                профессионального качества. Область изображения увеличивается в 4 раза. Портретные 
+                                фото, селфи и снимки движущихся объектов – все получается намного ярче. Режим ночной 
+                                съемки включается автоматически, результат – контрастные фото с естественной 
+                                цветопередачей.
+                            </p>
+                            <p>
+                                Удивительно реалистичные видеоролики позволяют снимать мощный процессор и 
+                                технологии машинного обучения. Изображение редактируется в режиме реального 
+                                времени — выразительные лица и никакого шума на заднем фоне.
+                            </p>
+                        </li>
+                        <li class="descriptions__item description">
+                            Характеристики
+                        </li>
+                        <li class="descriptions__item description">
+                            Аксессуары
+                        </li>
+                        <li class="descriptions__item description">
+                            Отзывы
+                        </li>
+                        <li class="descriptions__item description">
+                            Вопрос-ответ
+                        </li>
+                    </ul>
+                </div>
+            </form>
         </article>
     </main>
   </body>
