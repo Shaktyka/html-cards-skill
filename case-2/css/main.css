@@ -116,14 +116,35 @@ body {
     
     min-height: 35.7rem;
 
-    box-shadow: inset 1px 0 0 var(--border), 0 1px 0 0 var(--border), 1px 0 0 0 var(--border);
-    border-radius: 10px;
+    box-shadow: 
+        inset 1px 0 0 var(--border), /* left */
+        0 1px 0 0 var(--border), /* bottom */
+        1px 0 0 0 var(--border), /* right */
+        inset 0 1px 0 var(--border); /* top */
+    border-radius: 1rem;
 }
 
 .card:focus {
     outline-style: solid;
     outline-color: var(--accent);
     outline-width: 0.2rem;
+}
+
+.card:hover {
+    width: 29rem;
+    height: 37.7rem;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    margin-right: -1rem;
+    margin-left: -1rem;
+
+    padding: 10px;
+    box-shadow: 
+        inset 1px 0 0 var(--border), 
+        0 1px 0 0 var(--border), 
+        1px 0 0 0 var(--border), 
+        inset 0 1px 0 var(--border),
+        0 0.4rem 1.5rem rgba(76, 75, 77, 0.1); /* эффект увеличения карточки */
 }
 
 .label {
@@ -157,6 +178,11 @@ body {
 .card--hit .label--hit,
 .card--new .label--new {
     display: flex;
+}
+
+.card:hover .label {
+    top: 2.4rem;
+    left: 2.4rem;
 }
 
 .card__img-wrap {
