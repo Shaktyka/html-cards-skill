@@ -7,6 +7,8 @@ const Card = (props) => {
 
     const className = `cards__item card ${isSale === true ? 'card--sale': ''} ${isHit === true ? 'card--hit' : ''} ${isNew === true ? 'card--new' : ''}`;
 
+    const reviewsWordForm = declOfNum(reviews, ['отзыв', 'отзыва', 'отзывов']);
+
     return (
         <li className={className} tabIndex="0" id={id}>
             <span className="label label--new card__label">
@@ -38,7 +40,7 @@ const Card = (props) => {
                                 alt="Звезд рейтинга"
                             />{rating}
                         </span>
-                        <a className="card__reviews" href="#">{reviews} отзывов</a>
+                        <a className="card__reviews" href="#">{reviews} {reviewsWordForm}</a>
                     </div>
                 </div>
                 <h3 className="card__title">{title}</h3>
