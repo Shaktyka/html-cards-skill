@@ -118,6 +118,8 @@ body {
 
     border: 0.1rem solid var(--white);
     border-radius: 4px;
+
+    cursor: pointer;
 }
 
 .button--accent {
@@ -128,6 +130,23 @@ body {
     border: 0.1rem solid var(--accent-color);
 }
 
+.button--accent:hover {
+    background-color: #C20127;
+    border-color: #C20127;
+}
+
+.button--accent:focus {
+    background-color: #DE012C;
+    border-color: #DE012C;
+    outline: 0.2rem solid #001524;
+}
+
+.button--accent[disabled] {
+    background-color: #E5E3E4;
+    border-color: #E5E3E4;
+    color: #B2B1B2;
+}
+
 .button--bordered {
     border: 0.1rem solid var(--accent-color);
 }
@@ -135,6 +154,28 @@ body {
 .button--bordered span {
     margin-left: 0.4rem;
     color: var(--accent-color);
+}
+
+.button--bordered:hover {
+    background-color: #001524;
+    border-color: #001524;
+    color: var(--white);
+}
+
+.button--bordered:focus {
+    background-color: var(--white);
+    border-color: var(--white);
+    outline: 0.2rem solid #001524;
+}
+
+.button--bordered[disabled] {
+    color: #BFBCBD;
+    border-color: #BFBCBD;
+}
+
+.button--bordered[disabled] span {
+    color: #BFBCBD;
+    border-color: #BFBCBD;
 }
 
 /* Карточка */
@@ -252,7 +293,11 @@ body {
 
 /* Кнопки */
 
-.card-info__button {
+.card-info__buttons {
+    margin-top: 3rem;
+}
+
+.card-info__button:not(:last-child) {
     margin-bottom: 2rem;
 }
 
