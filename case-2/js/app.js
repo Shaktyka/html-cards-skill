@@ -3,11 +3,14 @@
 const Card = (props) => {
     const {id, title, article, rating, reviews, price, image, isSale, isHit, isNew} = props.data;
 
+    let newPrice = price;
     const imgUrl = `img/${image}`;
-
     const className = `cards__item card ${isSale === true ? 'card--sale': ''} ${isHit === true ? 'card--hit' : ''} ${isNew === true ? 'card--new' : ''}`;
-
     const reviewsWordForm = declOfNum(reviews, ['отзыв', 'отзыва', 'отзывов']);
+
+    if (isSale) {
+        newPrice = Math.round(price / 2);
+    }
 
     return (
         <li className={className} tabIndex="0" id={id}>
@@ -46,8 +49,8 @@ const Card = (props) => {
                 <h3 className="card__title">{title}</h3>
                 <div className="card__buy">
                     <div className="card__prices">
-                        <span className="card__price">{price} &#8381;</span>
-                        <span className="card__price card__price--old">435 &#8381;</span>
+                        <span className="card__price">{newPrice} &#8381;</span>
+                        <del className="card__price card__price--old">{price} &#8381;</del>
                     </div>
                     <div className="card__buttons">
                         <button className="button card__button" type="button">
