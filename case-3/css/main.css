@@ -291,6 +291,33 @@ body {
     flex-wrap: wrap;
 }
 
+/* Цена */
+
+.price {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.price__text {
+    display: flex;
+    align-items: center;
+    
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+}
+
+.price__value {
+    margin-left: auto;
+
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    color: #1C1919;
+}
+
 /* Кнопки */
 
 .card-info__buttons {
