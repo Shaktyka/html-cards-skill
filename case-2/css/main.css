@@ -116,8 +116,7 @@ body {
     
     min-height: 35.7rem;
 
-    box-shadow: inset 1px 1px 0 var(--border);
-    /* border: 2px solid var(--border); */
+    box-shadow: inset 1px 0 0 var(--border), 0 1px 0 0 var(--border), 1px 0 0 0 var(--border);
     border-radius: 10px;
 }
 
