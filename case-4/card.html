@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+</head>
+<body>
+    <main className="main">
+        <div className="container">
+            <section class="cards">
+                <ul class="list cards__list">
+
+                    <li class="cards__item card" tabindex="0" id="1">
+                        <span className="label label--sale card__label">
+                            Скидка 30%
+                        </span>
+                        <span className="label label--hit card__label">
+                            Хит
+                        </span>
+                        <span className="label label--cashback card__label">
+                            Кэшбэк 30%
+                        </span>
+                        <div class="card__img-wrap">
+                            <img 
+                                className="img card__img" 
+                                src="img/photo-1.png"
+                                width="auto" height="193"
+                                alt="Название"
+                            />
+                        </div>
+                        <div className="card__description">
+                            <!-- цена -->
+                            <div className="card__prices">
+                                <span className="card__price">111111 &#8381;</span>
+                                <del className="card__price card__price--old">222222 &#8381;</del>
+                            </div>
+                            <!-- Название -->
+                            <h3 className="card__title">Название</h3>
+                            <!-- Наличие -->
+                            <div class="card__info">
+                                <p class="card__availability">
+                                    <img src="img/ok-arrow.svg" alt="">
+                                    Есть в наличии
+                                </p>
+                                <div class="card__stars star-rate">
+                                  <img src="img/star.svg" alt="">
+                                  <img src="img/star.svg" alt="">
+                                  <img src="img/star.svg" alt="">
+                                  <img src="img/star.svg" alt="">
+                                  <img src="img/star.svg" alt="">
+                                </div>
+                                <a class="card__reviews link" href="#">246 отзывов</a>
+                            </div>
+                            <!-- Кнопки -->
+                            <div className="card__buttons">
+                                <button class="button card__button button--accent">Добавить в корзину</button>
+                                <button className="button card__button" type="button">
+                                    <img 
+                                        className="button__img" src="img/heart.svg" 
+                                        width="20" height="20" 
+                                        alt="Кнопка 'В избранное'"
+                                    />
+                                    <span className="visually-hidden">Добавить в избранное</span>
+                                </button>
+                                <button className="button card__button card__button--buy" type="button">
+                                    <img 
+                                        className="button__img" src="img/compare.svg" 
+                                        width="20" height="20" 
+                                        alt="Кнопка 'Сравнить'"
+                                    />
+                                    <span className="visually-hidden">Сравнить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
