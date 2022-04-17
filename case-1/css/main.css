@@ -114,8 +114,29 @@ a {
   border-color: #0D0417;
 }
 
-.button--link {
+.button--link:hover .button--link--arrow {
+  background-color: var(--yellow);
+}
 
+.button--link:visited {
+  color: #797980;
+}
+
+.button--link[disabled] {
+  color: #B6B6BF;
+}
+
+.button--link[disabled] .button--link--arrow {
+  background-color: #DEDEDE;
+}
+
+.button--link[disabled] .button--link--arrow path {
+  background-color: #DEDEDE;
+  stroke: #B6B6BF;
+}
+
+.button--link:focus {
+  text-decoration: 2px solid #F8D456;
 }
 
 /* Карточка */
@@ -258,4 +279,19 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-top: 3rem;
+}
+
+.card__button:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.button--link--arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-left: 1.5rem;
+  background-color: #fff;
+  border-radius: 50%;
 }
