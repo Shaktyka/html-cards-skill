@@ -2,14 +2,18 @@
 
 Пока в навыке доступны не все кейсы.
 
-[Кейс 1](case-1/index.html) 
+[Кейс 1](https://shaktyka.github.io/html-cards-skill/case-1/index.html) 
+
 Карточка товара
 
-[Кейс 2](case-2/index.html)
+[Кейс 2](https://shaktyka.github.io/html-cards-skill/case-2/index.html)
+
 Список карточек. Отрендерила карточки с помощью подключенного к странице React.
 
-[Кейс 3](case-3/index.html) - в процессе
+[Кейс 3](https://shaktyka.github.io/html-cards-skill/case-3/index.html) - в процессе
+
 Карточка товара, более сложная
 
-[Кейс 4](case-4/index.html) - в процессе
+[Кейс 4](https://shaktyka.github.io/html-cards-skill/case-4/index.html) - в процессе
+
 Список карточек. Отрендерила карточки с помощью подключенного к странице React.
