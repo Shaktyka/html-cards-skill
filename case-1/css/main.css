@@ -28,6 +28,8 @@ html, body {
   color: var(--main-text);
 }
 
+/* Ссылки */
+
 a {
   text-decoration: none;
   color: inherit;
@@ -56,12 +58,64 @@ a {
   color: #B6B6BF;
 }
 
+/* Контейнер карточек */
+
 .card-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* Кнопки */
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+
+  padding: 1.5rem;
+
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #0D0417;
+
+  border: none;
+  cursor: pointer;
+}
+
+.button--action {
+  padding-left: 2.6rem;
+  padding-right: 2.6rem;
+  background-color: var(--yellow);
+
+  border: 0.1rem solid var(--yellow);
+  border-radius: 0.6rem;
+}
+
+.button--action:hover {
+  background-color: transparent;
+  border-color: transparent;
+  outline: 2px solid var(--yellow);
+}
+
+.button--action[disabled] {
+  background-color: #E6E4E1;
+  color: #A6A5A2;
+  border-color: #E6E4E1;
+  outline: none;
+}
+
+.button--action:focus {
+  outline: none;
+  border-color: #0D0417;
+}
+
+.button--link {
+
 }
 
 /* Карточка */
@@ -175,9 +229,33 @@ a {
   line-height: 2.2rem;
 }
 
+.params__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+
+  border-bottom: 0.1rem solid rgba(13, 4, 23, 0.1);
+}
+
+.params__term {
+  color: #787878;
+}
+
+.params__value {
+  color: #0D0417;
+}
+
 /* Кнопки */
 
 .card-info__buttons {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 3rem;
 }
