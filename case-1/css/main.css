@@ -5,12 +5,16 @@
 }
 
 :root {
-  --white: #ffffff;
+  --white: #FFFFFF;
   --main-text: #0D0417;
   --yellow: #F8D456;
   --gray: #797980;
   --l-gray: #B6B6BF;
   --info-color: #F5F5F5;
+  --disabled-color: #E6E4E1;
+  --text-disabled: #A6A5A2;
+  --link-disabled-bg: #DEDEDE;
+  --article-color: #787878;
 }
 
 html, body {
@@ -39,23 +43,35 @@ a {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 2.5rem;
-}
 
-.link:hover {
-  text-decoration: underline;
-  text-decoration-color: #000;
+  outline: none;
+  text-decoration: none;
+
+  transition: all 0.2s ease-in-out 0s;
 }
 
 .link:visited {
-  color: #797980;
+  color: var(--gray);
 }
 
-.link:focus {
+.link:hover {
+  text-decoration-color: var(--main-text);
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.1rem;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.link:focus,
+.link:active {
+  color: var(--main-text);
   text-decoration-color: var(--yellow);
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.2rem;
+  transition: all 0.2s ease-in-out 0s;
 }
 
-.link[disabled] {
-  color: #B6B6BF;
+.link:disabled {
+  color: var(--l-gray);
 }
 
 /* Контейнер карточек */
@@ -81,10 +97,22 @@ a {
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 1.9rem;
-  color: #0D0417;
+  color: var(--main-text);
 
   border: none;
   cursor: pointer;
+}
+
+.button:enabled:hover,
+.button:enabled:focus,
+.button:enabled:active {
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.button:disabled {
+  border-color: var(--disabled-color);
+  background-color: var(--disabled-color);
+  color: var(--text-disabled);
 }
 
 .button--action {
@@ -92,51 +120,62 @@ a {
   padding-right: 2.6rem;
   background-color: var(--yellow);
 
-  border: 0.1rem solid var(--yellow);
+  border: 0.2rem solid var(--yellow);
   border-radius: 0.6rem;
 }
 
-.button--action:hover {
-  background-color: transparent;
+.button--action:enabled:hover {
+  background-color: var(--white);
   border-color: transparent;
-  outline: 2px solid var(--yellow);
+  outline: 0.2rem solid var(--yellow);
 }
 
-.button--action[disabled] {
-  background-color: #E6E4E1;
-  color: #A6A5A2;
-  border-color: #E6E4E1;
+.button--action:disabled {
+  background-color: var(--disabled-color);
+  color: var(--text-disabled);
+  border-color: var(--disabled-color);
   outline: none;
 }
 
-.button--action:focus {
+.button--action:enabled:focus,
+.button--action:enabled:active {
   outline: none;
-  border-color: #0D0417;
+  border: 0.1rem solid var(--main-text);
 }
 
 .button--link:hover .button--link--arrow {
   background-color: var(--yellow);
 }
 
+.button--link:hover .button--link--arrow path {
+  stroke: var(--white);
+}
+
 .button--link:visited {
-  color: #797980;
+  color: var(--gray);
 }
 
-.button--link[disabled] {
-  color: #B6B6BF;
+.button--link:disabled {
+  color: var(--l-gray);
 }
 
-.button--link[disabled] .button--link--arrow {
-  background-color: #DEDEDE;
+.button--link:disabled .button--link--arrow {
+  background-color: var(--link-disabled-bg);
 }
 
-.button--link[disabled] .button--link--arrow path {
-  background-color: #DEDEDE;
-  stroke: #B6B6BF;
+.button--link:disabled .button--link--arrow path {
+  background-color: var(--link-disabled-bg);
+  stroke: var(--l-gray);
 }
 
 .button--link:focus {
-  text-decoration: 2px solid #F8D456;
+  text-decoration: 0.2rem solid var(--yellow);
+}
+
+.button:enabled:hover,
+.button:enabled:focus,
+.button:enabled:active {
+  transition: background-color, color, border 0.2s ease-in-out 0s;
 }
 
 /* Карточка */
@@ -150,14 +189,17 @@ a {
 /* Блок изображения */
 
 .card__img-wrap {
-  display: flex;
+  display: block;
   max-width: 67rem;
   object-fit: contain;
+  border-radius: 0.8rem;
 }
 
 .card__img {
-  width: 67rem;
+  display: block;
   border-radius: 0.8rem;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Блок инфо */
@@ -178,7 +220,7 @@ a {
 
   font-size: 1.4rem;
   line-height: 1.9rem;
-  color: #787878;
+  color: var(--article-color);
 }
 
 .card-info__title {
@@ -265,11 +307,11 @@ a {
 }
 
 .params__term {
-  color: #787878;
+  color: var(--article-color);
 }
 
 .params__value {
-  color: #0D0417;
+  color: var(--main-text);
 }
 
 /* Кнопки */
@@ -292,6 +334,6 @@ a {
   width: 1.8rem;
   height: 1.8rem;
   margin-left: 1.5rem;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 50%;
 }

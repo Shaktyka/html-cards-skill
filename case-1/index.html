@@ -25,15 +25,16 @@
           width="670" height="684" 
           alt="Новогодняя игрушка Снеговик" 
           title="Новогодняя игрушка Снеговик"
+          aria-labelledby="img-main"
         >
       </div>
       <!-- Информация -->
       <div class="card__info-wrap card-info">
         <p class="card-info__article">Артикул: 856935</p>
-        <h1 class="card-info__title">Новогодняя игрушка Снеговик</h1>
+        <h1 class="card-info__title" id="img-main">Новогодняя игрушка Снеговик</h1>
         <div class="card-info__info">
           <div class="card-info__price">490 &#8381;</div>
-          <div class="card-info__stars star-rate">
+          <div class="card-info__stars star-rate" role="img" aria-label="Рейтинг 5 из 5">
             <img src="img/star.svg" alt="">
             <img src="img/star.svg" alt="">
             <img src="img/star.svg" alt="">
@@ -74,7 +75,7 @@
         </div>
         <!-- Ссылки -->
         <div class="card-info__buttons">
-          <button href="#" class="button button--action card__button">
+          <button href="#" class="button button--action card__button" type="button">
             Добавить в корзину
           </button>
           <a href="#" class="button button--link card__button">
