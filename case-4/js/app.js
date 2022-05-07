@@ -36,12 +36,9 @@ const Card = (props) => {
                         <img src="img/ok-arrow.svg" alt="" />
                         Есть в наличии
                     </p>
-                    <div className="card__stars star-rate">
+                    <div className="card__rating">
                         <img src="img/star.svg" alt="" />
-                        <img src="img/star.svg" alt="" />
-                        <img src="img/star.svg" alt="" />
-                        <img src="img/star.svg" alt="" />
-                        <img src="img/star.svg" alt="" />
+                        <span className="card__rating-value">{rating}</span>
                     </div>
                     <a className="card__reviews link" href="#">246 отзывов</a>
                 </div>

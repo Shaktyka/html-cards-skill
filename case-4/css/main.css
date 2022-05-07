@@ -117,6 +117,10 @@ body {
     margin-bottom: 1.3rem;
 }
 
+.card__description {
+    margin-top: auto;
+}
+
 .card__prices {
     display: flex;
     align-items: center;
@@ -146,14 +150,42 @@ body {
 
 .card__info {
     display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 1.4rem;
+    grid-template-columns: auto auto auto;
+    column-gap: 1rem;
+    align-items: center;
 
     margin-bottom: 1.4rem;
 }
 
 .card__availability {
     margin: 0;
+}
+
+.card__availability img {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.card__rating {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+.card__rating img {
+    margin-right: 0.5rem;
+}
+
+.card__reviews {
+    text-decoration: underline;
+    color: #797D80;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
 }
 
 .card__buttons {
