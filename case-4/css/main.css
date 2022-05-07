@@ -1,0 +1,169 @@
+/* variables */
+:root {
+    --bg-color: #F7F7F7;
+    --text-color: #001524;
+
+    --white: #ffffff;
+    --gray: #797D80;
+    --yellow: #F8D456;
+    --button-color: #DE012C;
+    --blue: #5EBAD9;
+    --red: #FB212F;
+}
+
+/* base */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Mplus 1p", "Arial", sans-serif;
+    font-size: 10px;
+    line-height: 21px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 0.1rem;
+    height: 0.1rem;
+    margin: -0.1rem;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Контейнер */
+
+.main {
+    background-color: var(--white);
+}
+
+.container {
+    width: 136.6rem;
+    margin: 0 auto;
+}
+
+/* Список карточек */
+
+.cards {
+    padding: 9.8rem;
+}
+
+.cards__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
+    row-gap: 3rem;
+}
+
+/* Карточка */
+
+.card {
+    position: relative;
+    min-height: 41.4rem;
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.3rem 1rem 2rem;
+    background: #FFFFFF;
+
+    border: 1px solid var(--white);
+    box-shadow: 0px 4px 15px rgba(157, 162, 166, 0.12);
+}
+
+.card:focus {
+    border: 1px solid #001524;
+}
+
+.card__img-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 19.3rem;
+
+    margin-bottom: 1.3rem;
+}
+
+.card__prices {
+    display: flex;
+    align-items: center;
+}
+
+.card__price {
+    margin-bottom: 1rem;
+
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+}
+
+.card__price--old {
+    display: none;
+    margin-left: 1rem;
+}
+
+.card__title {
+    margin: 0;
+    margin-bottom: 1.5rem;
+
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+}
+
+.card__info {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1.4rem;
+
+    margin-bottom: 1.4rem;
+}
+
+.card__availability {
+    margin: 0;
+}
+
+.card__buttons {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    column-gap: 2rem;
+}
+
+/* Лейблы */
+
+.label {
+    display: none;
+}

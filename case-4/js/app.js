@@ -37,11 +37,11 @@ const Card = (props) => {
                         Есть в наличии
                     </p>
                     <div className="card__stars star-rate">
-                    <img src="img/star.svg" alt="" />
-                    <img src="img/star.svg" alt="" />
-                    <img src="img/star.svg" alt="" />
-                    <img src="img/star.svg" alt="" />
-                    <img src="img/star.svg" alt="" />
+                        <img src="img/star.svg" alt="" />
+                        <img src="img/star.svg" alt="" />
+                        <img src="img/star.svg" alt="" />
+                        <img src="img/star.svg" alt="" />
+                        <img src="img/star.svg" alt="" />
                     </div>
                     <a className="card__reviews link" href="#">246 отзывов</a>
                 </div>
@@ -93,13 +93,6 @@ const Main = ({cards}) => {
         </main>
     );
 };
-
-// Тестовый элемент
-const PageTitle = () => {
-    return (
-        <h1>Каталог</h1>
-    );
-}
 
 // Приложение
 const App = ({cards}) => {
