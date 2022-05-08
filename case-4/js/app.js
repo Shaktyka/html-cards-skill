@@ -29,6 +29,8 @@ const Card = (props) => {
     const rewiewsForms = ['отзыв', 'отзыва', 'отзывов'];
     const reviewsWord = declOfNum(reviews, rewiewsForms);
 
+    const priceWithSale = salePrice ? salePrice : price;
+
     return (
         <li className={className} tabIndex="0" id={id}>
             {
@@ -44,7 +46,7 @@ const Card = (props) => {
             </div>
             <div className="card__description">
                 <div className="card__prices">
-                    <span className="card__price">{formatPrice(price)} <span className="card__price-ruble">&#8381;</span></span>
+                    <span className="card__price">{formatPrice(priceWithSale)} <span className="card__price-ruble">&#8381;</span></span>
                     <del className="card__price card__price--old">{formatPrice(price)} <span className="card__price-ruble">&#8381;</span></del>
                 </div>
                 <h3 className="card__title">{title}</h3>

@@ -12,3 +12,8 @@ const declOfNum = (n, text_forms) => {
 const formatPrice = (price) => {
     return price ? new Intl.NumberFormat('ru-RU').format(price) : 0;
 };
+
+// Считает цену со скидкой:
+const calcSalePrice = (price, saleValue = 0) => {
+    return price - (price * saleValue/price);
+};
