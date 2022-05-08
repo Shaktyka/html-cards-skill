@@ -65,6 +65,35 @@ body {
     overflow: hidden;
 }
 
+/* Кнопки */
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.button--colored {
+    padding: 0.7rem;
+
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: var(--white);
+
+    background: #DE012C;
+    border-radius: 0.4rem;
+}
+
+.button--icon:hover path {
+    stroke: #DE012C;
+}
+
 /* Контейнер */
 
 .main {
@@ -191,7 +220,7 @@ body {
 .card__buttons {
     display: grid;
     grid-template-columns: 1fr auto auto;
-    column-gap: 2rem;
+    column-gap: 1.8rem;
 }
 
 /* Лейблы */
