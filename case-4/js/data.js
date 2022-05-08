@@ -26,7 +26,8 @@ const data = [
         isAvailable: true,
         rating: 4.2,
         reviews: 155,
-        sale: 30
+        action: 'sale',
+        amount: 30
     },
     {
         id: 4,
@@ -45,7 +46,8 @@ const data = [
         isAvailable: true,
         rating: 5.0,
         reviews: 46,
-        isHit: true
+        action: 'hit',
+        amount: 0
     },
     {
         id: 6,
@@ -64,7 +66,8 @@ const data = [
         isAvailable: true,
         rating: 4.2,
         reviews: 53,
-        cashback: 30
+        action: 'cashback',
+        amount: 30
     },
     {
         id: 8,

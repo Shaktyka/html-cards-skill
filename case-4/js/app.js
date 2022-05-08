@@ -1,25 +1,39 @@
+// Типы акций
+const actionTypeDictionary = {
+    sale: 'Скидка',
+    hit: 'Хит',
+    cashback: 'Кэшбэк'
+};
+
+// Лейбл
+const Label = ({type, amount = 0}) => {
+    const className = `label label--${type}`;
+    const actionName = actionTypeDictionary[type];
+    const actionValue = amount !== 0 ? `${actionName} ${amount}%` : actionName;
+
+    return (
+        <span className={className}>
+            {actionValue}
+        </span>
+    );
+};
 
 // Карточка товара:
 const Card = (props) => {
-    const {id, title, rating, reviews, price, salePrice, images, isAvailable, sale, isHit, cashback } = props.data;
+    const {id, title, rating, reviews, price, salePrice, images, isAvailable, action, amount } = props.data;
 
     const imgUrl = `img/${images[0]}`;
-    const className = `cards__item card`;
+    const actionClass = action ? `card--${action}` : null;
+    const className = `cards__item card ${actionClass}`;
 
     const rewiewsForms = ['отзыв', 'отзыва', 'отзывов'];
     const reviewsWord = declOfNum(reviews, rewiewsForms);
 
     return (
-        <li className="cards__item card" tabIndex="0" id={id}>
-            <span className="label label--sale card__label">
-                Скидка 30%
-            </span>
-            <span className="label label--hit card__label">
-                Хит
-            </span>
-            <span className="label label--cashback card__label">
-                Кэшбэк 30%
-            </span>
+        <li className={className} tabIndex="0" id={id}>
+            {
+                <Label type={action} amount={amount} />
+            }
             <div className="card__img-wrap">
                 <img 
                     className="img card__img" 
@@ -30,8 +44,8 @@ const Card = (props) => {
             </div>
             <div className="card__description">
                 <div className="card__prices">
-                    <span className="card__price">{formatPrice(price)} <span class="card__price-ruble">&#8381;</span></span>
-                    <del className="card__price card__price--old">{formatPrice(price)} <span class="card__price-ruble">&#8381;</span></del>
+                    <span className="card__price">{formatPrice(price)} <span className="card__price-ruble">&#8381;</span></span>
+                    <del className="card__price card__price--old">{formatPrice(price)} <span className="card__price-ruble">&#8381;</span></del>
                 </div>
                 <h3 className="card__title">{title}</h3>
                 <div className="card__info">

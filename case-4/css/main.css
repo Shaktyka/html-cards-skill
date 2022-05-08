@@ -166,6 +166,10 @@ body {
 .card__price--old {
     display: none;
     margin-left: 1rem;
+
+    color: #797D80;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
 }
 
 .card__price-ruble {
@@ -231,4 +235,32 @@ body {
 
 .label {
     display: none;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 0.8rem;
+
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    border: 1px solid #FB212F;
+}
+
+.label--hit {
+    border-color: #8962F8;
+}
+
+.label--cashback {
+    border-color: #5EBAD9;
+}
+
+.card--sale .label--sale,
+.card--hit .label--hit,
+.card--cashback .label--cashback {
+    display: block;
+}
+
+.card--sale .card__price--old {
+    display: inline-block;
 }
