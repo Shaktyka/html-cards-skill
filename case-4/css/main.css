@@ -168,6 +168,10 @@ body {
     margin-left: 1rem;
 }
 
+.card__price-ruble {
+    font-family: 'Noto Sans', sans-serif;
+}
+
 .card__title {
     margin: 0;
     margin-bottom: 1.5rem;
