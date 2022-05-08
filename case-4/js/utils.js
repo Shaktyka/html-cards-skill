@@ -7,3 +7,8 @@ const declOfNum = (n, text_forms) => {
     if (n1 == 1) { return text_forms[0]; }
     return text_forms[2];
 };
+
+// Добавляет пробелы между тысячами
+const formatPrice = (price) => {
+    return price ? new Intl.NumberFormat('ru-RU').format(price) : 0;
+};

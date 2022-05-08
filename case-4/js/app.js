@@ -30,8 +30,8 @@ const Card = (props) => {
             </div>
             <div className="card__description">
                 <div className="card__prices">
-                    <span className="card__price">{price} <span class="card__price-ruble">&#8381;</span></span>
-                    <del className="card__price card__price--old">{price} <span class="card__price-ruble">&#8381;</span></del>
+                    <span className="card__price">{formatPrice(price)} <span class="card__price-ruble">&#8381;</span></span>
+                    <del className="card__price card__price--old">{formatPrice(price)} <span class="card__price-ruble">&#8381;</span></del>
                 </div>
                 <h3 className="card__title">{title}</h3>
                 <div className="card__info">
