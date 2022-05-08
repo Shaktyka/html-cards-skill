@@ -52,8 +52,12 @@ const Card = (props) => {
                 <h3 className="card__title">{title}</h3>
                 <div className="card__info">
                     <p className="card__availability">
-                        <img src="img/ok-arrow.svg" alt="" />
-                        Есть в наличии
+                        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 4L5.36364 8L13 1" stroke="#17CA29" strokeWidth="2"/>
+                        </svg>
+                        {
+                            isAvailable ? 'Есть в наличии' : 'Нет в наличии'
+                        }
                     </p>
                     <div className="card__rating">
                         <img src="img/star.svg" alt="" />
