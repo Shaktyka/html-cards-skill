@@ -6,6 +6,9 @@ const Card = (props) => {
     const imgUrl = `img/${images[0]}`;
     const className = `cards__item card`;
 
+    const rewiewsForms = ['отзыв', 'отзыва', 'отзывов'];
+    const reviewsWord = declOfNum(reviews, rewiewsForms);
+
     return (
         <li className="cards__item card" tabIndex="0" id={id}>
             <span className="label label--sale card__label">
@@ -40,7 +43,7 @@ const Card = (props) => {
                         <img src="img/star.svg" alt="" />
                         <span className="card__rating-value">{rating}</span>
                     </div>
-                    <a className="card__reviews link" href="#">246 отзывов</a>
+                    <a className="card__reviews link" href="#">{reviews} {reviewsWord}</a>
                 </div>
                 <div className="card__buttons">
                     <button className="button card__button button--colored">В корзину</button>
