@@ -36,13 +36,35 @@ const Card = (props) => {
             {
                 <Label type={action} amount={amount} />
             }
+            <ul className="list card__switches">
+                <li className="card__switch card__switch--active">
+                    <button className="card__switch-button">
+                        <span className="visually-hidden">Фото 1</span>
+                    </button>
+                </li>
+                <li className="card__switch">
+                    <button className="card__switch-button">
+                        <span className="visually-hidden">Фото 2</span>
+                    </button>
+                </li>
+                <li className="card__switch">
+                    <button className="card__switch-button">
+                        <span className="visually-hidden">Фото 3</span>
+                    </button>
+                </li>
+                <li className="card__switch">
+                    <button className="card__switch-button">
+                        <span className="visually-hidden">Фото 4</span>
+                    </button>
+                </li>
+                <li className="card__switch">
+                    <button className="card__switch-button">
+                        <span className="visually-hidden">Фото 5</span>
+                    </button>
+                </li>
+            </ul>
             <div className="card__img-wrap">
-                <img 
-                    className="img card__img" 
-                    src={imgUrl}
-                    width="auto" height="193"
-                    alt="Название"
-                />
+                <img className="img card__img" src={imgUrl} width="auto" height="193" alt="Название" />
             </div>
             <div className="card__description">
                 <div className="card__prices">

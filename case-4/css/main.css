@@ -137,6 +137,33 @@ body {
     border: 1px solid #001524;
 }
 
+.card__switches {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card__switch {
+    display: flex;
+    margin-right: 0.5rem;
+}
+
+.card__switch:last-child {
+    margin-right: 0;
+}
+
+.card__switch-button {
+    width: 2.4rem;
+    background-color: transparent;
+    padding: 0;
+    border: 0.2rem solid #C8CACC;
+    border-radius: 0.2rem;
+}
+
+.card__switch--active .card__switch-button {
+    border-color: #001524;
+}
+
 .card__img-wrap {
     display: flex;
     justify-content: center;
@@ -191,7 +218,7 @@ body {
     column-gap: 1rem;
     align-items: center;
 
-    margin-bottom: 1.4rem;
+    margin-bottom: 3rem;
 }
 
 .card__availability {
