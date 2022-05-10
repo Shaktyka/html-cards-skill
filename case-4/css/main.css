@@ -126,7 +126,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    padding: 1.3rem 1rem 2rem;
+    padding: 0.5rem 1rem 2rem;
     background: #FFFFFF;
 
     border: 1px solid var(--white);
@@ -137,15 +137,28 @@ body {
     border: 1px solid #001524;
 }
 
+.card:hover {
+    margin: -15px;
+    padding: 1.8rem 2.5rem 3.5rem 2.5rem;
+
+    box-shadow: 0px 4px 20px rgba(157, 162, 166, 0.35);
+}
+
 .card__switches {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin-bottom: 1rem;
+    min-height: 0.2rem;
 }
 
 .card__switch {
-    display: flex;
+    display: none;
     margin-right: 0.5rem;
+}
+
+.card:hover .card__switch {
+    display: flex;
 }
 
 .card__switch:last-child {
@@ -158,6 +171,7 @@ body {
     padding: 0;
     border: 0.2rem solid #C8CACC;
     border-radius: 0.2rem;
+    cursor: pointer;
 }
 
 .card__switch--active .card__switch-button {

@@ -23,7 +23,7 @@ const Card = (props) => {
     const {id, title, rating, reviews, price, salePrice, images, isAvailable, action, amount } = props.data;
 
     const imgUrl = `img/${images[0]}`;
-    const actionClass = action ? `card--${action}` : null;
+    const actionClass = action ? `card--${action}` : '';
     const className = `cards__item card ${actionClass}`;
 
     const rewiewsForms = ['отзыв', 'отзыва', 'отзывов'];
