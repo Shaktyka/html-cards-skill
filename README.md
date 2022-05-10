@@ -14,6 +14,6 @@
 
 Карточка товара, более сложная
 
-[Кейс 4](https://shaktyka.github.io/html-cards-skill/case-4/index.html) - в процессе
+[Кейс 4](https://shaktyka.github.io/html-cards-skill/case-4/index.html)
 
 Список карточек. Отрендерила карточки с помощью подключенного к странице React.
